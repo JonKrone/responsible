@@ -8,27 +8,22 @@ import * as userAction from '../actionCreators/user';
 import * as viewAction from '../actionCreators/view';
 
 export class TopNavBar extends React.Component {
-  constructor({ drivers, flags, onSettingsButtonClick, onMiddleButtonClick }) {
+  constructor() {
     super();
-    this.drivers = drivers;
-    this.flags = flags;
   }
 
   render() {
     return (
       <div className="TopNavBarContainer">
         <SettingIcon />
-        <TopNavBarMiddleButton
-          {...this.flags}
-          drivers={this.drivers}
-          onMiddleButtonClick={onMiddleButtonClick}
-        />
+        <TopNavBarMiddleButton {...this.props} />
       </div>
     );
   }
 };
 
 const mapStateToProps = function (state) {
+  console.log('noticed state change', state.toJS());
   return state.toJS();
 };
 

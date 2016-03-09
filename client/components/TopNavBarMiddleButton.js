@@ -3,12 +3,13 @@ import { DriverItemList } from './DriverItemList';
 
 export function TopNavBarMiddleButton({ isDriver, isRider, isMatched,
   isWaitingForMatch, drivers, onMiddleButtonClick, }) {
+  console.log('rendering: isDriver?', isDriver);
   return (
     <div className="topNavBarMiddleButton">
       {
         // Main page (not yet driver or rider)
         isDriver === false && isRider === false ?
-          <DriveButton onClick={onMiddleButtonClick('isDriver')} /> :
+          <DriveButton onMiddleButtonClick={onMiddleButtonClick.bind(null, 'isDriver')} /> :
 
         // Choosing page (user is now a rider but not matched)
         // isRider === true && isMatched === null ?
@@ -19,10 +20,10 @@ export function TopNavBarMiddleButton({ isDriver, isRider, isMatched,
 
         //   // User is driver
         //   isDriver === true ?
-        //     <RiderInfo onClick={onMiddleButtonClick('riderInfo')} /> :
+        //     <RiderInfo onClick={onMiddleButtonClick.bind(null, 'riderInfoView')} /> :
 
         //   // User is rider
-        //     <DriverInfo onClick={onMiddleButtonClick('driverInfo')} />
+        //     <DriverInfo onClick={onMiddleButtonClick.bind(null, 'driverInfoView')} />
         // : <Error />
       }
     </div>

@@ -34,12 +34,6 @@ const dummyState = {
     { itemTitle: 'Austin' },
     { itemDesc: 'Virginia' },
   ],
-  flags: {
-    isDriver: false,
-    isRider: true,
-    isMatched: false,
-    isConfirmed: false,
-  },
   drivers: [
     {
       id: 10,
@@ -53,6 +47,10 @@ const dummyState = {
       fullName: 'Mrowr',
     },
   ],
+  isDriver: false,
+  isRider: false,
+  isMatched: false,
+  isConfirmed: false,
 };
 
 const store = createStore(rootReducer, fromJS(dummyState));
