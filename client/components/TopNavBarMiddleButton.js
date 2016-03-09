@@ -3,7 +3,6 @@ import { DriverItemList } from './DriverItemList';
 
 export function TopNavBarMiddleButton({ isDriver, isRider, isMatched,
   isWaitingForMatch, drivers, onMiddleButtonClick, }) {
-  console.log('rendering: isDriver?', isDriver);
   return (
     <div className="topNavBarMiddleButton">
       {
