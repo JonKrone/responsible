@@ -5,10 +5,10 @@ require('../public/styles/normalize.css');
 function nullFn(e) { console.log('you clicked me ' + e.target.className); };
 
 export function SettingIcon({
-  onSettingButtonClick = nullFn,
+  onSettingsButtonClick = nullFn,
 }) {
   return (
-    <div className='SettingIcon two columns' onClick={onSettingButtonClick}>
+    <div className='SettingIcon two columns' onClick={onSettingsButtonClick}>
       <button className='SettingButton btn u-full-width' type='button'>Settings!</button>
     </div>
   );
