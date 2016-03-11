@@ -8,13 +8,9 @@ function nullFn(e) { console.log('you clicked me ' + e.target.className); };
 export function ProfileButton({
   onProfileButtonClick = nullFn,
 }) {
-
-  // Link to={`/profile/${user.id}`}
   return (
     <div className='ProfileButtonDiv two columns' onClick={onProfileButtonClick}>
-      <button className='ProfileButton btn u-full-width'>
-        <Link to="/profile">Profile</Link>
-      </button>
+      <button className='ProfileButton btn u-full-width'>Profile</button>
     </div>
   );
 }
